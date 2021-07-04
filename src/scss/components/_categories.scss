@@ -1,0 +1,109 @@
+@import '../variables';
+
+
+//.smth {
+//  //some CSS
+//  @media screen and (max-width: $small) {
+//    //do Smth
+//  }
+//  @media screen and (min-width: $medium) {
+//    //do Smth
+//  }
+//}
+.sortMobile {
+  display: none;
+}
+.sortMobile {
+  @media screen and (max-width: $medium) {
+    display: block;
+    position: relative;
+    &__label {
+      display: flex;
+      align-items: center;
+
+      svg {
+        margin-right: 8px;
+        transform: rotate(180deg);
+        &.opened {
+          transform: rotate(0deg);
+        }
+      }
+
+      b {
+        margin-right: 8px;
+      }
+
+      span {
+        color: $orange;
+        border-bottom: 1px dashed $orange;
+        cursor: pointer;
+      }
+    }
+
+    &__popup {
+      position: absolute;
+      left: 0;
+      margin-top: 15px;
+      background: #fff;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.09);
+      border-radius: 10px;
+      overflow: hidden;
+      padding: 10px 0;
+      width: 160px;
+
+      ul {
+        overflow: hidden;
+        li {
+          padding: 12px 20px;
+          cursor: pointer;
+
+          &.active,
+          &:hover {
+            background: rgba(254, 95, 30, 0.05);
+          }
+
+          &.active {
+            font-weight: bold;
+            color: $orange;
+          }
+        }
+      }
+    }
+  }
+}
+
+.categories {
+  @media screen and (max-width: $medium) {
+    display: none;
+  }
+  ul {
+    display: flex;
+
+    li {
+      background-color: #f9f9f9;
+      padding: 13px 30px;
+      border-radius: 30px;
+      margin-right: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.1s ease-in-out;
+      @media screen and (max-width: $medium) {
+        color: #f24701;
+      }
+      @include noselect();
+
+      &:hover {
+        background-color: darken(#f9f9f9, 2%);
+      }
+
+      &:active {
+        background-color: darken(#f9f9f9, 5%);
+      }
+
+      &.active {
+        background-color: #282828;
+        color: #fff;
+      }
+    }
+  }
+}
