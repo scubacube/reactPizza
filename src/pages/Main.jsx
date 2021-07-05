@@ -14,7 +14,7 @@ const sortItems = [
     ];
 
 function Main() {
-    // axios.defaults.baseURL = "https://us-central1-pizzafunction.cloudfunctions.net/api";
+    axios.defaults.baseURL = "https://json-server-pizza.herokuapp.com";
 
     const dispatch = useDispatch();
     const {items, isLoading} = useSelector(({pizzas, filters}) => {

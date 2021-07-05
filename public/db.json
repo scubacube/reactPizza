@@ -6,6 +6,7 @@
       "name": "Fresh pepperoni with pepper",
       "types": [0, 1],
       "sizes": [26, 30, 40],
+      "sizes": [26, 30, 40],
       "price": 169,
       "category": 1,
       "rating": 4
