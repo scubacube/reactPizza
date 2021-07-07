@@ -55,15 +55,15 @@ function Main() {
                                 items={sortItems}
                                 onClickSortType={onClickSortType}/>
                 </div>
-                <div className="content__items">
-                    {
-                        isLoading ? items.map(el => <PizzaItem onClickAddPizza={onClickAddPizza}
-                                                               key={el.id}
-                                                               count={cartItems[el.id] && cartItems[el.id].items.length}
-                                                               {...el}/>) :
-                        Array(10).fill(0).map((_, index) =>
-                            (<PizzaLoadingBlock key={index} />))}
-                </div>
+                    <div className="content__items">
+                        {
+                            isLoading ? items.map(el => <PizzaItem onClickAddPizza={onClickAddPizza}
+                                                                   key={el.id}
+                                                                   count={cartItems[el.id] && cartItems[el.id].items.length}
+                                                                   {...el}/>) :
+                                Array(10).fill(0).map((_, index) =>
+                                    (<PizzaLoadingBlock key={index} />))}
+                    </div>
             </div>
         </div>
     )
