@@ -41,7 +41,7 @@ function Main() {
 
     React.useEffect(() => {
         dispatch(fetchPizzas(category, sortBy));
-    }, [category, sortBy]); // = componentDidMount
+    }, [category, sortBy]);
 
     return (
         <div className="content">
