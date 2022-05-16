@@ -17,7 +17,7 @@ function Main() {
     axios.defaults.baseURL = "https://json-server-pizza.herokuapp.com";
 
     const dispatch = useDispatch();
-    const {items, isLoading} = useSelector(({pizzas, filters}) => {
+    const {items, isLoading} = useSelector(({pizzas}) => {
         return {
             items: pizzas.items,
             isLoading: pizzas.isLoading
@@ -47,7 +47,6 @@ function Main() {
         <div className="content">
             <div className="container">
                 <div className="content__top">
-                    {/*<MenuListComposition />*/}
                     <Categories activeCategory={category}
                                 onClickCategory={onSelectCategory}
                                 items={categoryNames}/>

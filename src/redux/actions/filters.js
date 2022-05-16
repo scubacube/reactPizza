@@ -6,7 +6,6 @@ export const setSortBy = (sortBy) => {
 }
 
 export const setCategory = (category) => {
-    // debugger
     return {
         type: 'SET_CATEGORY',
         payload: category

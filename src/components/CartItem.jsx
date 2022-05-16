@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-function CartItem({id, name, type, size, totalPrice, totalCount, onDeletePizza, minusItem, plusItem}) {
+function CartItem({id, name, totalPrice, totalCount, onDeletePizza, minusItem, plusItem}) {
     const onDeletePizzaFromItem = () => {
         onDeletePizza(id);
     }

@@ -9,10 +9,9 @@ const getTotalPrice = arr => {
 };
 
 export const cart = (state = initState, action) => {
-
     switch (action.type) {
         case "ADD_PIZZA_CART": {
-            const currentPizzaItems = !state.items[action.payload.id] //undefined?
+            const currentPizzaItems = !state.items[action.payload.id] 
                 ? [action.payload]
                 : [...state.items[action.payload.id].items, action.payload]
 
@@ -26,8 +25,7 @@ export const cart = (state = initState, action) => {
 
             const items = Object.values(newItems).map(obj => {
                 return obj.items;
-            } );//Object.values(newItems) - получили тут массив объектов,
-            // затем через мап получили массив с items
+            } );
 
             const allPizzas = [].concat.apply([], items);
             const totalPrice = getTotalPrice(allPizzas);
@@ -117,5 +115,4 @@ export const cart = (state = initState, action) => {
         }
         default:  return state;
     }
-    return state;
 }
